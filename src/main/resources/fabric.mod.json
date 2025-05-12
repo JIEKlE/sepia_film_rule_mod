@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "sepia_film_rule_mod",
+	"version": "${version}",
+	"name": "Sepia Film Rule Mod",
+	"description": "세피아 필름 룰 모드 by Jiekie",
+	"authors": [
+		"Jiekie"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/JIEKlE/sepia_film_rule_mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/sepia_film_rule_mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"jiekie.SepiaFilmRuleMod"
+		],
+		"fabric-datagen": [
+			"jiekie.SepiaFilmRuleModDataGenerator"
+		],
+		"client": [
+			"jiekie.SepiaFilmRuleModClient"
+		]
+	},
+	"mixins": [
+		"sepia_film_rule_mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.13",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
