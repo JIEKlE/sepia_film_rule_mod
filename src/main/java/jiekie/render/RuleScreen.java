@@ -28,9 +28,6 @@ public class RuleScreen extends Screen {
 
     @Override
     protected void init() {
-        int centerX = this.width / 2;
-        int centerY = this.height / 2;
-
         // rule image
         int imageWidth = this.width;
         int imageHeight = this.height;
@@ -45,8 +42,8 @@ public class RuleScreen extends Screen {
         // previous page
         int arrowWidth = 32;
         int arrowHeight = 32;
-        int leftArrowX = centerX - 120 - arrowWidth / 2;
-        int arrowY = centerY + 80;
+        int leftArrowX = 60;
+        int arrowY = this.height - 60;
         this.addDrawable(new Drawable() {
             @Override
             public void render(DrawContext context, int mouseX, int mouseY, float delta) {
@@ -61,7 +58,7 @@ public class RuleScreen extends Screen {
         this.addDrawableChild(previousPageButton);
 
         // next page
-        int rightArrowX = centerX + 120 - arrowWidth / 2;
+        int rightArrowX = this.width - 60 - arrowWidth;
         this.addDrawable(new Drawable() {
             @Override
             public void render(DrawContext context, int mouseX, int mouseY, float delta) {
